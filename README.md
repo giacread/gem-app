@@ -1,5 +1,9 @@
 # React + Vite
 
+## Publishing workflow
+
+When a requested code change is complete, verify it, commit only the files relevant to the change, and push to `origin/main`. The GitHub push triggers the connected Vercel deployment. Generated previews, reference material, local configuration, and unrelated files are not included unless explicitly requested.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
