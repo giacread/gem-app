@@ -112,7 +112,10 @@ function App() {
         <main className="main-panel">
           <div className="content-scroll" tabIndex={0} aria-label="Homepage content">
             <div className="dashboard-content">
-            <h1 className="greeting">Good morning!</h1>
+            <div className="greeting-block">
+              <h1 className="greeting">Good morning!</h1>
+              <p className="greeting-subtitle">Small steps. Big progress.</p>
+            </div>
 
             <section className="hero-card">
               <div className="lesson-panel">
@@ -139,6 +142,7 @@ function App() {
                   <li><span className="dot blue" aria-hidden="true">✓</span> Practice questions <strong>124</strong></li>
                   <li><span className="dot mint" aria-hidden="true">✓</span> Study streak <strong>12 days</strong></li>
                 </ul>
+                <button type="button" className="progress-link">View full progress <Icon name="arrow" /></button>
               </div>
             </section>
 

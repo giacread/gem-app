@@ -2,13 +2,13 @@
 .topbar { position: fixed; inset: 0 0 auto; height: var(--topbar-height); z-index: 10; display: flex; align-items: center; padding: 0 30px 0 23px; background: rgb(248 252 255 / 94%); backdrop-filter: blur(16px); }
 .brand-wrap { width: 163px; flex-shrink: 0; display: flex; align-items: center; gap: 10px; color: #073aff; }
 .brand-mark { width: 23px; height: 28px; }
-.brand-name { font-size: 22px; letter-spacing: -.6px; }
-.search-box { width: 378px; height: 35px; display: flex; align-items: center; border: 1px solid #dae5ff; border-radius: 10px; background: #ffffff80; }
+.brand-name { font-size: 22px; font-weight: 600; letter-spacing: -.6px; }
+.search-box { width: 378px; height: 35px; margin-left: auto; display: flex; align-items: center; border: 1px solid #dae5ff; border-radius: 10px; background: #ffffff80; }
 .search-icon { display: grid; place-items: center; width: 35px; flex-shrink: 0; color: #5f6bc4; }
 .search-icon .icon { width: 16px; height: 16px; }
 .search-box input { width: 100%; min-width: 0; border: 0; background: transparent; outline: none; font-size: 11px; color: #111655; padding-right: 10px; }
 .search-box input::placeholder { color: #747fc0; opacity: 1; }
-.top-actions { margin-left: auto; display: flex; align-items: center; gap: 23px; padding-left: 24px; }
+.top-actions { margin-left: 30px; display: flex; align-items: center; gap: 23px; }
 .icon-button, .avatar-button { display: grid; place-items: center; border: 1px solid #e5edff; background: transparent; width: 36px; height: 36px; border-radius: 12px; color: #003aff; position: relative; }
 .notification-dot { position: absolute; width: 6px; height: 6px; background: #ff2457; border-radius: 50%; top: 3px; right: 3px; box-shadow: 0 0 0 2px #f8fcff; }
 .avatar-button { width: 40px; height: 40px; border-radius: 50%; background: #e6efff; font-size: 17px; }
@@ -16,7 +16,7 @@
 .icon { width: 22px; height: 22px; display: block; flex-shrink: 0; }
 .sidebar { position: fixed; top: var(--topbar-height); left: 0; bottom: 0; width: var(--sidebar-width); border-right: 1px solid #eaf2fd; background: #f8fcff; overflow: hidden; z-index: 9; }
 .sidebar-nav { position: relative; z-index: 1; padding: 0 14px 0 16px; display: grid; gap: 7px; }
-.nav-item { display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; border: 0; border-radius: 11px; padding: 0 10px; background: transparent; color: #515eaa; text-align: left; font-size: 12px; white-space: nowrap; }
+.nav-item { display: flex; align-items: center; gap: 12px; width: 100%; height: 38px; border: 0; border-radius: 11px; padding: 0 10px; background: transparent; color: #515eaa; text-align: left; font-size: 12px; font-weight: 600; white-space: nowrap; }
 .nav-icon .icon { width: 19px; height: 19px; }
 .nav-item.active { color: #003cff; background: #e9f0ff; }
 .nav-item:hover { background: #e9f0ff; }
@@ -25,30 +25,35 @@
 .main-panel { position: fixed; top: var(--topbar-height); left: var(--sidebar-width); right: 0; bottom: 0; overflow: hidden; }
 .content-scroll { height: 100%; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; scrollbar-color: #cbdcff transparent; }
 .dashboard-content { position: relative; padding: 30px 22px 0 30px; isolation: isolate; min-height: 1451px; }
-.greeting { margin: 0; height: 78px; font-weight: 500; font-size: 42px; letter-spacing: -1.7px; line-height: 1.2; }
-.hero-card { display: grid; grid-template-columns: minmax(0, 1fr) 219px; min-height: 243px; border: 1px solid #e1eaff; border-radius: 11px; overflow: hidden; background: #ffffffb8; }
-.lesson-panel { position: relative; overflow: hidden; border-radius: 10px; background: linear-gradient(120deg, #eaf0ff, #e5f5ff); }
-.hero-copy { position: relative; z-index: 1; padding: 17px 20px; }
-.inline-label { font-size: 14px; font-weight: 600; letter-spacing: 2px; margin-bottom: 21px; }
+.greeting-block { min-height: 108px; }
+.greeting { margin: 0; font-weight: 500; font-size: 42px; letter-spacing: -1.7px; line-height: 1.08; }
+.greeting-subtitle { margin: 8px 0 0; color: #6470aa; font-size: 18px; font-weight: 500; letter-spacing: -.25px; }
+.hero-card { display: grid; grid-template-columns: minmax(0, 2.15fr) minmax(230px, 1fr); gap: 20px; min-height: 285px; }
+.lesson-panel, .progress-panel { border: 1px solid #e1eaff; border-radius: 14px; background: #ffffffd1; box-shadow: 0 5px 22px rgb(112 145 214 / 7%); }
+.lesson-panel { position: relative; overflow: hidden; background: linear-gradient(120deg, #edf1ff, #e5f5ff); }
+.hero-copy { position: relative; z-index: 1; padding: 31px 31px; }
+.inline-label { font-size: 17px; font-weight: 700; letter-spacing: -.3px; margin-bottom: 25px; }
 .topic-tag { color: #5866b1; font-size: 18px; margin-bottom: 6px; }
-.hero-copy h2 { font-size: 28px; letter-spacing: -.8px; font-weight: 500; margin: 0; }
-.primary-button { margin-top: 13px; border: 1px solid #668aff; border-radius: 28px; background: #0342ff; color: white; padding: 12px 23px; display: flex; align-items: center; gap: 22px; font-size: 16px; min-height: 47px; box-shadow: 0 0 0 2px #ffffff60; }
+.hero-copy h2 { font-size: 29px; letter-spacing: -.8px; font-weight: 700; margin: 0; }
+.primary-button { margin-top: 21px; border: 1px solid #668aff; border-radius: 28px; background: #0342ff; color: white; padding: 12px 28px; display: flex; align-items: center; justify-content: space-between; gap: 28px; font-size: 16px; font-weight: 600; min-width: 194px; min-height: 48px; box-shadow: 0 0 0 2px #ffffff60; }
 .primary-button .icon { width: 19px; }
 .lesson-art { position: absolute; inset: 0; width: 100%; height: 100%; }
-.progress-panel { padding: 17px 19px 13px 23px; }
-.progress-heading { font-size: 13px; margin: 0 0 10px; }
-.progress-ring { position: relative; width: 100px; height: 100px; margin: 0 auto 17px; display: grid; place-items: center; }
+.progress-panel { padding: 27px 25px 18px; }
+.progress-heading { font-size: 17px; font-weight: 700; margin: 0 0 12px; }
+.progress-ring { position: relative; width: 126px; height: 126px; margin: 0 auto 16px; display: grid; place-items: center; }
 .progress-ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
-.progress-ring-inner { font-size: 23px; letter-spacing: -.7px; }
-.progress-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 13px; font-size: 12px; color: #727ebc; }
+.progress-ring-inner { font-size: 28px; font-weight: 700; letter-spacing: -.7px; }
+.progress-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 11px; font-size: 12px; font-weight: 600; color: #727ebc; }
 .progress-list li { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
-.progress-list strong { font-weight: 400; color: #151d65; margin-left: auto; }
+.progress-list strong { font-weight: 700; color: #151d65; margin-left: auto; }
+.progress-link { display: flex; align-items: center; gap: 7px; margin: 13px 0 0; padding: 0; border: 0; background: transparent; color: #174bff; font-size: 12px; font-weight: 600; }
+.progress-link .icon { width: 14px; height: 14px; }
 .dot { display: grid; place-items: center; width: 12px; height: 12px; border-radius: 50%; background: #32c8bd; color: #fff; font-size: 9px; }
 .dot.mint { background: #357aff; }
 .section-block { margin-top: 26px; }
 .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; min-height: 20px; }
-.section-header h3 { font-size: 17px; font-weight: 400; margin: 0; color: #202978; letter-spacing: -.3px; }
-.header-link { padding: 0 8px; border: 0; background: transparent; color: #003cff; font-size: 12px; }
+.section-header h3 { font-size: 18px; font-weight: 700; margin: 0; color: #161d60; letter-spacing: -.3px; }
+.header-link { padding: 0 8px; border: 0; background: transparent; color: #003cff; font-size: 12px; font-weight: 600; }
 .task-list, .teacher-card, .access-card, .activity-list { border: 1px solid #e3ecff; border-radius: 11px; background: #ffffffb8; box-shadow: 0 4px 15px #bedaff08; }
 .task-list { padding: 0 13px 0 17px; }
 .task-row { display: grid; grid-template-columns: 39px minmax(0, 1fr) auto 20px; align-items: center; gap: 20px; min-height: 65px; border-bottom: 1px solid #edf2fd; }
@@ -56,7 +61,7 @@
 .task-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: #eaf2ff; color: #0342ff; }
 .task-icon .icon { width: 21px; height: 21px; }
 .task-row.lavender .task-icon { background: #eeebff; color: #583aff; }
-.task-title { font-size: 14px; letter-spacing: -.2px; }
+.task-title { font-size: 14px; font-weight: 600; letter-spacing: -.2px; }
 .task-detail { font-size: 12px; color: #727dbb; margin-top: 6px; }
 .task-due { background: #f1f4f9; color: #505d9a; border-radius: 20px; padding: 7px 15px; font-size: 11px; white-space: nowrap; }
 .task-row:first-child .task-due { background: #fff0f3; color: #ff304f; }
@@ -64,9 +69,9 @@
 .teacher-card { position: relative; min-height: 114px; padding: 15px 20px 14px 89px; }
 .teacher-meta { display: flex; align-items: flex-start; }
 .teacher-badge { position: absolute; left: 20px; top: 15px; width: 49px; height: 49px; border-radius: 50%; background: #e6eeff; color: #0740ff; display: grid; place-items: center; font-size: 19px; }
-.teacher-name { font-size: 14px; margin: 0 0 8px; }
+.teacher-name { font-size: 14px; font-weight: 700; margin: 0 0 8px; }
 .teacher-name span { color: #737ebb; font-size: 12px; margin-left: 10px; }
-.teacher-title { font-size: 14px; }
+.teacher-title { font-size: 14px; font-weight: 600; }
 .more-button { margin-left: auto; border: 0; padding: 0; background: none; color: #5c6dc1; letter-spacing: 2px; }
 .teacher-body { margin: 4px 0 0; font-size: 12px; color: #727cba; line-height: 20px; }
 .access-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
@@ -83,7 +88,7 @@
 .access-icon .icon { width: 26px; height: 26px; }
 .access-card.neutral .access-icon { background: #e2f8f5; color: #008675; }
 .access-card.purple .access-icon { background: #efecff; color: #6035ff; }
-.access-copy h4 { font-size: 15px; font-weight: 400; margin: 0 0 4px; }
+.access-copy h4 { font-size: 15px; font-weight: 700; margin: 0 0 4px; }
 .access-copy p { margin: 0; font-size: 12px; line-height: 17px; color: #6e7ab7; max-width: 150px; padding-right: 4px; }
 .access-arrow { position: absolute; bottom: 9px; right: 12px; border: 1px solid #e1ecff; border-radius: 50%; width: 37px; height: 37px; background: #ffffffdb; color: #0742ff; display: grid; place-items: center; }
 .access-arrow .icon { width: 19px; }
@@ -91,6 +96,7 @@
 .activity-block { margin-top: 28px; }
 .activity-list { padding: 0 13px 4px 20px; }
 .activity-item { display: grid; grid-template-columns: 28px 125px minmax(0, 1fr) 85px; gap: 14px; align-items: center; min-height: 43px; border-bottom: 1px solid #edf2fd; font-size: 12px; }
+.activity-label { font-weight: 600; }
 .activity-item:last-child { border: 0; }
 .activity-icon { width: 27px; height: 29px; display: grid; place-items: center; border-radius: 9px; background: #e9f3ff; color: #003cff; }
 .activity-icon .icon { width: 21px; height: 21px; }
@@ -101,6 +107,6 @@
 .activity-meta, .activity-time { color: #727dbb; }
 .activity-time { text-align: right; padding-right: 12px; white-space: nowrap; }
 .footer-art { height: 155px; margin-top: 12px; background: url('./assets/homepage-reference.png') right bottom / 941px 1672px repeat-x; pointer-events: none; }
-@media (min-width: 1200px) { .dashboard-content { padding-left: 40px; padding-right: 40px; } .hero-card { grid-template-columns: minmax(0, 1fr) 270px; } }
+@media (min-width: 1200px) { .dashboard-content { padding-left: 40px; padding-right: 40px; } .hero-card { grid-template-columns: minmax(0, 2.15fr) minmax(300px, 1fr); min-height: 310px; } }
 @media (max-width: 800px) { .app-shell { --sidebar-width: 140px; } .brand-wrap { width: 139px; } .top-actions { gap: 10px; padding-left: 15px; } .topbar { padding-right: 18px; } .nav-item { gap: 8px; padding: 0 7px; font-size: 11px; } .sidebar-nav { padding: 0 9px; } .dashboard-content { padding: 32px 18px 0; } .hero-card { grid-template-columns: minmax(0, 1fr) 195px; } .hero-copy { padding-left: 16px; } .hero-copy h2 { font-size: 25px; } .progress-panel { padding-left: 14px; padding-right: 14px; } .task-row { gap: 12px; } .task-due { padding: 7px 9px; } .access-card { padding: 14px 12px; } .access-copy p { max-width: 125px; padding-right: 12px; } .activity-item { grid-template-columns: 26px 110px minmax(0, 1fr); gap: 10px; } .activity-time { grid-column: 3; font-size: 10px; padding-bottom: 7px; } }
-@media (max-width: 620px) { .app-shell { --sidebar-width: 64px; } .topbar { padding-left: 19px; gap: 14px; } .brand-wrap { width: 26px; } .brand-name, .nav-label, .nav-badge { display: none; } .search-box { flex: 1; } .top-actions { padding: 0; gap: 8px; } .settings-button { display: none; } .icon-button, .avatar-button { width: 32px; height: 32px; } .sidebar-nav { padding: 0 10px; gap: 9px; } .nav-item { justify-content: center; padding: 0; } .nav-icon .icon { width: 21px; height: 21px; } .dashboard-content { padding: 24px 15px 0; min-height: auto; } .greeting { font-size: 32px; height: 64px; } .hero-card { grid-template-columns: 1fr; } .lesson-panel { min-height: 230px; } .progress-panel { display: grid; grid-template-columns: 95px 1fr; gap: 10px 15px; } .progress-heading { grid-column: 1 / -1; margin: 0; } .progress-ring { width: 90px; height: 90px; margin: 0; } .progress-list { align-self: center; font-size: 11px; } .task-row { grid-template-columns: 32px minmax(0,1fr) 12px; gap: 10px; padding: 12px 0; } .task-icon { width: 32px; height: 36px; } .task-title { font-size: 13px; line-height: 18px; } .task-detail { line-height: 17px; } .task-due { grid-column: 2; justify-self: start; } .task-arrow { grid-column: 3; grid-row: span 2; } .teacher-card { padding: 15px; } .teacher-meta { padding-left: 48px; min-height: 49px; } .teacher-badge { left: 12px; width: 39px; height: 39px; font-size: 16px; } .teacher-name span { display: block; margin: 4px 0 0; } .teacher-body { margin-top: 10px; } .access-grid, .secondary-grid { grid-template-columns: 1fr; } .access-card { min-height: 139px; padding-left: 20px; } .access-copy p { max-width: 180px; } .section-header h3 { font-size: 16px; } .header-link { padding: 0; font-size: 11px; } .activity-item { grid-template-columns: 25px minmax(0,1fr); gap: 5px 10px; padding: 10px 0; } .activity-meta { grid-column: 2; line-height: 17px; } .activity-time { grid-column: 2; text-align: left; padding: 0; } }
+@media (max-width: 620px) { .app-shell { --sidebar-width: 64px; } .topbar { padding-left: 19px; gap: 14px; } .brand-wrap { width: 26px; } .brand-name, .nav-label, .nav-badge { display: none; } .search-box { flex: 1; margin-left: 0; } .top-actions { margin-left: 0; gap: 8px; } .settings-button { display: none; } .icon-button, .avatar-button { width: 32px; height: 32px; } .sidebar-nav { padding: 0 10px; gap: 9px; } .nav-item { justify-content: center; padding: 0; } .nav-icon .icon { width: 21px; height: 21px; } .dashboard-content { padding: 24px 15px 0; min-height: auto; } .greeting-block { min-height: 94px; } .greeting { font-size: 32px; } .greeting-subtitle { font-size: 15px; } .hero-card { grid-template-columns: 1fr; } .lesson-panel { min-height: 260px; } .progress-panel { display: grid; grid-template-columns: 95px 1fr; gap: 10px 15px; } .progress-heading { grid-column: 1 / -1; margin: 0; } .progress-ring { width: 90px; height: 90px; margin: 0; } .progress-list { align-self: center; font-size: 11px; } .progress-link { grid-column: 1 / -1; } .task-row { grid-template-columns: 32px minmax(0,1fr) 12px; gap: 10px; padding: 12px 0; } .task-icon { width: 32px; height: 36px; } .task-title { font-size: 13px; line-height: 18px; } .task-detail { line-height: 17px; } .task-due { grid-column: 2; justify-self: start; } .task-arrow { grid-column: 3; grid-row: span 2; } .teacher-card { padding: 15px; } .teacher-meta { padding-left: 48px; min-height: 49px; } .teacher-badge { left: 12px; width: 39px; height: 39px; font-size: 16px; } .teacher-name span { display: block; margin: 4px 0 0; } .teacher-body { margin-top: 10px; } .access-grid, .secondary-grid { grid-template-columns: 1fr; } .access-card { min-height: 139px; padding-left: 20px; } .access-copy p { max-width: 180px; } .section-header h3 { font-size: 16px; } .header-link { padding: 0; font-size: 11px; } .activity-item { grid-template-columns: 25px minmax(0,1fr); gap: 5px 10px; padding: 10px 0; } .activity-meta { grid-column: 2; line-height: 17px; } .activity-time { grid-column: 2; text-align: left; padding: 0; } }
