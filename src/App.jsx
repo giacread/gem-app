@@ -112,7 +112,6 @@ function App() {
         <main className="main-panel">
           <div className="content-scroll" tabIndex={0} aria-label="Homepage content">
             <div className="dashboard-content">
-            <div className="mountain-art" aria-hidden="true" />
             <h1 className="greeting">Good morning!</h1>
 
             <section className="hero-card">
